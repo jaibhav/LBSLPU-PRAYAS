@@ -1,0 +1,26 @@
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    f_name VARCHAR(20) NOT NULL,
+    l_name VARCHAR(20) NOT NULL,
+    rno VARCHAR(8) NOT NULL UNIQUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    CHECK(LENGTH(rno==8)
+);
+
+
+//to reset auto AUTO_INCREMENT
+ALTER TABLE users AUTO_INCREMENT = 1
+
+1
+2
+3
+4
+5
+	
+CREATE TABLE `password_reset_temp` (
+  `email` varchar(250) NOT NULL,
+  `key` varchar(250) NOT NULL,
+  `expDate` datetime NOT NULL
+)
